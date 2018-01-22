@@ -15,7 +15,7 @@ echo ""
 echo "䷀䷁䷂䷃䷄䷅䷆䷇䷀䷁䷂䷃䷄䷅䷆䷇ $now ䷀䷁䷂䷃䷄䷅䷆䷇䷀䷁䷂䷃䷄䷅䷆䷇"
 git branch
 echo $LINE
-echo $(git log -1 --pretty=oneline)
+echo "$(git log -3 --pretty='tformat:%h | %s%+')"
 echo $LINE
 git status -s
 echo " "
