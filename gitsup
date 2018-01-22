@@ -15,7 +15,8 @@ echo ""
 echo "䷀䷁䷂䷃䷄䷅䷆䷇䷀䷁䷂䷃䷄䷅䷆䷇ $now ䷀䷁䷂䷃䷄䷅䷆䷇䷀䷁䷂䷃䷄䷅䷆䷇"
 git branch
 echo $LINE
-echo "$(git log -3 --pretty='tformat:%h | %s%+')"
+echo "\033[0;32m$(git log -1 --pretty='format:%Cgreen%h | %s%+' HEAD)"
+echo "\033[0m$(git log -2 --pretty='format:%Cgreen%h | %s%+' HEAD^^^..HEAD^)"
 echo $LINE
 git status -s
 echo " "
