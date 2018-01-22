@@ -1,7 +1,7 @@
 #!/bin/sh
 # requires fswatch and xargs
 if [[ $# -gt 0 ]]; then
-  gitsup; fswatch -0 $* | xargs -0 -n1 gitsup
+  gitsup; fswatch -0 -e ".git" $* | xargs -0 -n1 gitsup
 else
-  gitsup; fswatch -0 . | xargs -0 -n1 gitsup
+  gitsup; fswatch -0 -e ".git" . | xargs -0 -n1 gitsup
 fi
