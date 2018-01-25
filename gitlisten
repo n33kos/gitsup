@@ -6,3 +6,4 @@ else
   read -p "☾⚩ " COMMAND
 fi
 echo "$($COMMAND)"
+gitlisten
