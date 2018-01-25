@@ -1,0 +1,8 @@
+#!/bin/sh
+gitsup
+if [[ $# -gt 0 ]]; then
+  read -p "☾⚩ " -t $1 COMMAND
+else
+  read -p "☾⚩ " COMMAND
+fi
+echo "$($COMMAND)"
