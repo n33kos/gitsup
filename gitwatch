@@ -1,9 +1,9 @@
 #!/bin/sh
 # requires fswatch and xargs
 if [[ $# -gt 0 ]]; then
-  gitlisten 10
-  fswatch -0 -e ".git" $* | xargs -0 -n1 -o gitlisten 10
+  gitsup
+  fswatch -0 -e ".git" $* | xargs -0 -n1 -o gitsup
 else
-  gitlisten 10
-  fswatch -0 -e ".git" . | xargs -0 -n1 -o gitlisten 10
+  gitsup
+  fswatch -0 -e ".git" . | xargs -0 -n1 -o gitsup
 fi
