@@ -1,9 +1,12 @@
 #!/bin/sh
-gitsup
-if [[ $# -gt 0 ]]; then
-  read -p "☾⚩ " -t $1 COMMAND
-else
-  read -p "☾⚩ " COMMAND
-fi
-echo "$($COMMAND)"
-gitlisten
+while true; do
+  clear;
+  gitsup;
+
+  read -rep "> ";
+  line=$REPLY;
+  declare -a "line_array=($line)";
+
+  OUTPUT="$("${line_array[@]}")";
+  echo $OUTPUT
+done;
