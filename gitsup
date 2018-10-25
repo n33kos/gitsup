@@ -21,7 +21,7 @@ done
 
 clear
 echo "$TIMELINE $now $TIMELINE"
-git branch
+git --no-pager branch
 echo $LINE
 echo "\033[0;32m$(git log -1 --pretty='format:%Cgreen%h | %an | %s%+' HEAD)"
 echo "\033[0m$(git log -2 --pretty='format:%Cgreen%h | %an | %s%+' HEAD^^^..HEAD^)"
