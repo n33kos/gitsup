@@ -1,0 +1,36 @@
+#/bin/bash!
+
+# Alias this file with an environment variable to override default initials
+# > DEFAULT_INITIALS="nas" gitcob
+if [ -z "$DEFAULT_INITIALS" ]
+then
+  DEFAULT_INITIALS=$USER
+fi
+
+read -rep "Ticket Name [TIX-1234]: ";
+if [ -z "$REPLY" ]
+then
+  TICKET_NAME="TIX-1234";
+else
+  TICKET_NAME=$REPLY;
+fi
+
+read -rep "Initials [${DEFAULT_INITIALS}]: ";
+if [ -z "$REPLY" ]
+then
+  INITIALS=$DEFAULT_INITIALS;
+else
+  INITIALS=$REPLY;
+fi
+
+read -rep "Branch Type [feature]: ";
+if [ -z "$REPLY" ]
+then
+  BRANCH_TYPE="feature";
+else
+  BRANCH_TYPE=$REPLY;
+fi
+
+FINAL_BRANCH_NAME="${BRANCH_TYPE}/${INITIALS}/${TICKET_NAME}";
+
+git checkout -b "$FINAL_BRANCH_NAME" $*;
