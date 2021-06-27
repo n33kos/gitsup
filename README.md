@@ -1,5 +1,5 @@
 # Aliases & Commands
-This repository contains custom shell scripts and aliases I like to use for development.These are developed for macOS and might have some broken dependencies or errors in a linux environment.
+This repository contains custom shell scripts and aliases I like to use for development. These are developed for macOS and might have some broken dependencies or errors in a linux environment.
 
 
 ## Installation
@@ -9,7 +9,7 @@ This repository contains custom shell scripts and aliases I like to use for deve
   * `cp ./bash-scripts /usr/local/bin`
 
 
-
+# Descriptions
 ### gitsup
 Outputs a "git dashboard" with some pretty formatting.
 
