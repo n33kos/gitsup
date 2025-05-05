@@ -30,6 +30,7 @@ Contains some useful aliases meant to be merged with your existing .bashrc (or .
 - `prettylog` - Prints a pretty git log
 - `sup` - Alias for gitsup
 - `gpull` - Pull the origin HEAD
+- `gco` - git checkout alias
 - `gcob` - Sets default initials for the gitcob command and runs it
 - `gpush` - Pushes current branch to origin
 - `gdel` - Deletes the git branch provided as an argument
