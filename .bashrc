@@ -2,6 +2,7 @@
 alias prettylog='git log --graph --oneline --decorate --all'
 alias sup="gitsup"
 alias gpull='git pull origin HEAD'
+alias gco='git checkout $*'
 alias gcob='DEFAULT_INITIALS="nas" gitcob'
 alias gpush='git push -u origin HEAD'
 alias gdel='git branch -D $*'
